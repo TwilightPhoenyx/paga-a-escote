@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 
 import Saldo from "./Saldo";
+import styles from "./Aportacion.module.css";
+import iconoPersona from "../images/icono_persona.png";
 
 
 function Aportacion({aPagar}) {
@@ -10,13 +12,12 @@ function Aportacion({aPagar}) {
 
     function manejadorIntroducirPago(event){
 
-        const textoAlmacenado = cantidadAportada
+        const textoAlmacenado = cantidadAportada;
 
         if (/^[0-9]*\.?[0-9]{0,2}$/.test(event.target.value) === true) {
             setCantidadAportada(event.target.value);
         } 
         else {
-            console.log("Letras", textoAlmacenado)
             event.target.value = textoAlmacenado;
         };  
 
@@ -35,15 +36,12 @@ function Aportacion({aPagar}) {
 
 
     return (
-        <div>
+        <div className={styles.entradaPersona}>
+            <img src={iconoPersona} alt="icono.png" />
             <input type="text" placeholder="Nombre"></input>
-            <input type="text" maxLength={5} placeholder="Aportación €" 
-                onInput={manejadorIntroducirPago}
-            >
-
+            <input type="text" maxLength={5} placeholder="Aportación €" onInput={manejadorIntroducirPago}>
             </input>
-
-            <p>{aPagar}</p>
+            {/*<p>{aPagar}</p>*/}
             <Saldo saldo={valorSaldo}/>
         </div>
     );
