@@ -38,8 +38,8 @@ function Aportacion({aPagar}) {
     return (
         <div className={styles.entradaPersona}>
             <img src={iconoPersona} alt="icono.png" />
-            <input type="text" placeholder="Nombre"></input>
-            <input type="text" maxLength={5} placeholder="Aportación €" onInput={manejadorIntroducirPago}>
+            <input className={styles.nombre} type="text" placeholder="Nombre"></input>
+            <input className={styles.aportacionEuros} type="text" maxLength={5} placeholder="Pago €" onInput={manejadorIntroducirPago}>
             </input>
             {/*<p>{aPagar}</p>*/}
             <Saldo saldo={valorSaldo}/>
