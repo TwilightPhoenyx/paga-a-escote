@@ -34,20 +34,28 @@ function App() {
   );
 
   return (
-    <div>
-        <input type="range" min="1" max="20" onChange={manejadorSlider} list="personas"></input>
+    <div className="contenedor-flex">
+      <div className="intro-datos">
+       <label>
+          <input type="range" min="1" max="20" onChange={manejadorSlider} list="personas"></input>
+        </label>
         <datalist id="personas">
-            <option value="1" label="1"></option>
-            <option value="5" label="5"></option>
-            <option value="10" label="10"></option>
-            <option value="15" label="15"></option>
-            <option value="20" label="20"></option>
+            <option value="1"></option>
+            <option value="5"></option>
+            <option value="10"></option>
+            <option value="15"></option>
+            <option value="20"></option>
         </datalist>     
+        <div className="intro-datos-columna">
+            <p>Comensales: {numeroPersonas}</p>
+            <label> Total a Pagar: 
+                <InputDinero cantidad={precioTotal} setCantidad={setPrecioTotal} texto="Total €" />
+            </label>
+        </div>
+      </div>
 
-        <p>Comensales: {numeroPersonas}</p>
-        <InputDinero cantidad={precioTotal} setCantidad={setPrecioTotal} texto="Total €" />
-        <p>Precio a pagar por cabeza: {precioPersona.toFixed(2)}</p>
-        {listaPersonas}
+      <p>Precio a pagar por cabeza: {precioPersona.toFixed(2)}</p>
+      {listaPersonas}
     </div>
   );
 }
