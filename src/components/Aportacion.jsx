@@ -4,7 +4,7 @@ import InputDinero from "./InputDinero"
 
 import Saldo from "./Saldo";
 import styles from "./Aportacion.module.css";
-import iconoPersona from "../images/icono_persona.png";
+import iconoPersona from "../images/icono-persona.png";
 
 
 function Aportacion({aPagar}) {
