@@ -1,6 +1,21 @@
-input {
-  width: 150%;
+input[type="range"] {
+  width: 3rem;
+  height: 15rem;
+  margin-right: 1.5rem;
   appearance: slider-vertical;
+}
+
+h1 {
+  font-size: 2rem;
+  padding: 0.5rem;
+  width: 40rem;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  background-image: url(./images/fondo-mantel.png);
+  border-style: solid;
+  border-color: white;
+  border-radius: 1rem;
 }
 
 .contenedor-flex {
@@ -14,25 +29,54 @@ input {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  border-style: solid;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: rgb(83, 83, 241);
   border-radius: 1rem;
-  border-width: 0.15rem;
-  border-color: rgb(114, 114, 114);
   width: fit-content;
   padding-left: 0.2rem;
   padding-right: 0.2rem;
-  background-color: rgb(228, 228, 228);
+  padding: 1rem;
 }
 
-.intro-datos-columna {
+.la-cuenta {
+  background-image: url(./images/White-Plate-Transparent-Background.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18rem;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-items: center
-  width 20rem;
+  align-items: center;
+  justify-content: center;
+  width: 16rem;
+  height: 16rem;
 }
+
+.precio-persona {
+  width: 26rem;
+  text-align: center;
+  border-style: solid;
+  border-radius: 2rem;
+  border-width: 0.15rem;
+  border-color: rgb(83, 83, 241);
+  background-image: url(./images/fondo-papel.PNG);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  font-size: 1.4rem;
+}
+
+.precio-persona span {
+  color: rgb(83, 83, 241);
+  font-weight: bold;
+  font-size: 1.5rem;
+};
+
 
 #root {
   margin: 2rem;
+  margin-top: 1rem;
 };
 

@@ -12,14 +12,15 @@ function Saldo ({saldo}) {
    useEffect(() => {
 
    if (saldo === 0) {setImagen(SmileHappy)} // El smile ha pagado
-   else if (saldo >12) {setImagen(SmileNerveus)}  // El smile recibe el pago
+   else if (saldo >0) {setImagen(SmileNerveus)}  // El smile recibe el pago
    else {setImagen(SmileWorry)}  // El smile tiene que pagar
 
    
 
    
 
-   }
+   },
+   [saldo]
    )
    
    return(
@@ -27,7 +28,7 @@ function Saldo ({saldo}) {
             <p>Saldo {saldo.toFixed(2)}</p>
 
            
-            <img src={imagen} />
+            <img src={imagen}/>
         </div>
     );
     
