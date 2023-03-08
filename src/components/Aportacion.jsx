@@ -15,7 +15,7 @@ function Aportacion({aPagar}) {
     useEffect (
             ()=>{
                 if (isNaN(parseFloat(cantidadAportada)) === true) {
-                    setValorSaldo(0);
+                    setCantidadAportada(0);
                 } else {
                 setValorSaldo(parseFloat(cantidadAportada) - aPagar);
                 }
