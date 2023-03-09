@@ -1,4 +1,5 @@
 import styles from "./InputDinero.module.css";
+import { roundNumber } from "../lib";
 
 function InputDinero({cantidad, setCantidad, texto}) {
 
@@ -11,7 +12,7 @@ function InputDinero({cantidad, setCantidad, texto}) {
             setCantidad(event.target.value);
         } 
         else {
-            event.target.value = textoAlmacenado;
+            event.target.value = roundNumber(textoAlmacenado,2);
         };  
 
     };

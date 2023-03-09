@@ -2,8 +2,9 @@
 .saldo {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     align-items: center;
+    width: 14rem;
+    justify-content: space-between;
 }
 
 .saldo p {
@@ -11,6 +12,8 @@
   padding-right: 0.2rem;
   font-size: 1.5rem;
   font-weight: bold;
+  width: 8rem;
+  text-align: center;
 }
 
 .saldo img {

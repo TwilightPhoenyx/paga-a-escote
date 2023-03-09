@@ -4,6 +4,7 @@ import SmileHappy from "../images/SmileHappy.png"
 import SmileNerveus from "../images/SmileNerveus.png"
 import SmileWorry from "../images/SmileWorry.png"
 
+import styles from "./Saldo.module.css"
 
 function Saldo ({saldo}) {
 
@@ -12,7 +13,7 @@ function Saldo ({saldo}) {
    useEffect(() => {
 
    if (saldo === 0) {setImagen(SmileHappy)} // El smile ha pagado
-   else if (saldo >0) {setImagen(SmileNerveus)}  // El smile recibe el pago
+   else if (saldo > 0) {setImagen(SmileNerveus)}  // El smile recibe el pago
    else {setImagen(SmileWorry)}  // El smile tiene que pagar
 
    
@@ -24,10 +25,8 @@ function Saldo ({saldo}) {
    )
    
    return(
-        <div>
-            <p>Saldo {saldo.toFixed(2)}</p>
-
-           
+        <div className={styles.saldo}>
+            <p> {saldo.toFixed(2)} </p>
             <img src={imagen}/>
         </div>
     );
