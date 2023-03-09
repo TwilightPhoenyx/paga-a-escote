@@ -17,7 +17,21 @@
 }
 
 .saldo img {
-    width: 5rem;
-    height: 5rem;
-    border-radius: 1rem;
+    width: 4.5rem;
+    height: 4-5rem;
+    border-radius: 3rem;
+    border-style: solid;
+    border-width: 0.1rem;
+}
+
+.RedColor {
+  color: red;
+}
+
+.GreenColor {
+  color: green;
+}
+
+.BlueColor {
+  color: blue;
 }

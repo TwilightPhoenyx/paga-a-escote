@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 import InputDinero from "./InputDinero"
+import { roundNumber } from "../lib";
 
 import Saldo from "./Saldo";
 import styles from "./Aportacion.module.css";
@@ -17,7 +18,7 @@ function Aportacion({aPagar}) {
                 if (isNaN(cantidadAportada) === true) {
                     setCantidadAportada(0);
                 } else {
-                setValorSaldo(cantidadAportada - aPagar);
+                setValorSaldo(roundNumber((cantidadAportada - aPagar),2));
                 }
             },
             [cantidadAportada, aPagar]

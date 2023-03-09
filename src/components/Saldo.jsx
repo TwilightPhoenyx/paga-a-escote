@@ -9,25 +9,38 @@ import styles from "./Saldo.module.css"
 function Saldo ({saldo}) {
 
     let [imagen, setImagen] = useState();
+    let [color, setColor] = useState();
+    let [textoAlt, setTextoAlt] = useState("");
+
+
 
    useEffect(() => {
 
-   if (saldo === 0) {setImagen(SmileHappy)} // El smile ha pagado
-   else if (saldo > 0) {setImagen(SmileNerveus)}  // El smile recibe el pago
-   else {setImagen(SmileWorry)}  // El smile tiene que pagar
-
-   
-
-   
+        if (saldo === 0) {
+            setImagen(SmileHappy)
+            setColor(styles.BlueColor)
+            setTextoAlt("Smily feliz")
+        }      // El smile ha pagado
+        else if (saldo > 0) {
+            setImagen(SmileNerveus)
+            setColor(styles.GreenColor)
+            setTextoAlt("Smily sorprendido")
+        }  // El smile recibe el pago
+        else {
+            setImagen(SmileWorry)
+            setColor(styles.RedColor)
+            setTextoAlt("Smily preocupado")
+        }  // El smile tiene que pagar
 
    },
    [saldo]
    )
+
    
    return(
         <div className={styles.saldo}>
-            <p> {saldo.toFixed(2)} </p>
-            <img src={imagen}/>
+            <p className={color}>{saldo.toFixed(2)}</p>
+            <img src={imagen} alt={textoAlt}/>
         </div>
     );
     
