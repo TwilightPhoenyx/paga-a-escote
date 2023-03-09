@@ -19,17 +19,17 @@ function Saldo ({saldo}) {
         if (saldo === 0) {
             setImagen(SmileHappy)
             setColor(styles.BlueColor)
-            setTextoAlt("Smily feliz")
+            setTextoAlt("Smiley feliz")
         }      // El smile ha pagado
         else if (saldo > 0) {
             setImagen(SmileNerveus)
             setColor(styles.GreenColor)
-            setTextoAlt("Smily sorprendido")
+            setTextoAlt("Smiley sorprendido")
         }  // El smile recibe el pago
         else {
             setImagen(SmileWorry)
             setColor(styles.RedColor)
-            setTextoAlt("Smily preocupado")
+            setTextoAlt("Smiley preocupado")
         }  // El smile tiene que pagar
 
    },
@@ -40,7 +40,7 @@ function Saldo ({saldo}) {
    return(
         <div className={styles.saldo}>
             <p className={color}>{saldo.toFixed(2)}</p>
-            <img src={imagen} alt={textoAlt}/>
+            <img className={color} src={imagen} alt={textoAlt}/>
         </div>
     );
     
