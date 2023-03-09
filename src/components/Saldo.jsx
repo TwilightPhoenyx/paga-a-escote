@@ -39,7 +39,7 @@ function Saldo ({saldo}) {
    
    return(
         <div className={styles.saldo}>
-            <p className={color}>{saldo.toFixed(2)}</p>
+            <p className={color}>{saldo.toFixed(2)} €</p>
             <img className={color} src={imagen} alt={textoAlt}/>
         </div>
     );
