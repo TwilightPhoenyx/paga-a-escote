@@ -8,7 +8,7 @@ import styles from "./Aportacion.module.css";
 import iconoPersona from "../images/icono-persona.png";
 
 
-function Aportacion({aPagar}) {
+function Aportacion({aPagar, textoNombre}) {
 
     let [cantidadAportada, setCantidadAportada] = useState(0);
     let [valorSaldo, setValorSaldo] = useState(0);
@@ -36,7 +36,7 @@ function Aportacion({aPagar}) {
             }
         >
             <img src={iconoPersona} alt="icono.png" />
-            <input className={styles.nombre} type="text" placeholder="Nombre"></input>
+            <input className={styles.nombre} type="text" placeholder={textoNombre}></input>
             <InputDinero className={styles.pago} cantidad={cantidadAportada} setCantidad={setCantidadAportada} texto="Pago €"/>
             <Saldo saldo={valorSaldo}/>
         </div>

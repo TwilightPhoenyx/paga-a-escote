@@ -27,8 +27,10 @@ function App() {
       const nuevaPersona = []
             let contador = 0
             while (contador < numeroPersonas) {
-                nuevaPersona.push(<Aportacion aPagar={precioPersona} key={contador}/>)
+                const nombrePersona = "Nombre comensal " + (contador+1);
+                nuevaPersona.push(<Aportacion aPagar={precioPersona} textoNombre={nombrePersona} key={contador}/>)
                 contador++
+                
             }
             setListaPersonas(nuevaPersona)
 
