@@ -36,7 +36,7 @@ function Aportacion({aPagar, textoNombre}) {
             }
         >
             <img src={iconoPersona} alt="icono.png" />
-            <input className={styles.nombre} type="text" placeholder={textoNombre}></input>
+            <input className={styles.nombre} type="text" placeholder={textoNombre}/>
             <InputDinero className={styles.pago} cantidad={cantidadAportada} setCantidad={setCantidadAportada} texto="Pago €"/>
             <Saldo saldo={valorSaldo}/>
         </div>

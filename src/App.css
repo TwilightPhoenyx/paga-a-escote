@@ -16,13 +16,14 @@ h1 {
   border-style: solid;
   border-color: white;
   border-radius: 1rem;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(182, 182, 245);
 }
 
 .contenedor-flex {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
 .intro-datos {

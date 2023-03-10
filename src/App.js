@@ -27,7 +27,7 @@ function App() {
       const nuevaPersona = []
             let contador = 0
             while (contador < numeroPersonas) {
-                const nombrePersona = "Nombre comensal " + (contador+1);
+                const nombrePersona = "Nombre Comensal " + (contador+1);
                 nuevaPersona.push(<Aportacion aPagar={precioPersona} textoNombre={nombrePersona} key={contador}/>)
                 contador++
                 
@@ -43,7 +43,7 @@ function App() {
         <h1>{iconoTitulo} Pagando a Escote {iconoTitulo}</h1>
         <div className="intro-datos">
             <label>
-              <input type="range" min="1" max="20" value={numeroPersonas} onChange={manejadorSlider} list="personas"></input>
+              <input type="range" min="1" max="20" value={numeroPersonas} onChange={manejadorSlider} list="personas"/>
             </label>
             <datalist id="personas">
                 <option value="1"></option>

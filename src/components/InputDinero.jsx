@@ -20,8 +20,7 @@ function InputDinero({cantidad, setCantidad, texto}) {
     return(
         <input className={styles.valorEuros} type="text" maxLength={5} placeholder={texto} 
             onInput={manejadorIntroducirPago}
-        >
-        </input>
+        />
     );
 
 };
